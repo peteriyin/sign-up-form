@@ -29,7 +29,40 @@
           >
         </p>
       </div>
-      <form action="#" method="get" class="form"></form>
+      <div class="form-container">
+        <h1>Welcome!</h1>
+        <h2>Sign up to get started</h2>
+        <form action="#" method="get" class="form">
+          <div class="form-row">
+            <label for="name">First Name</label>
+            <input type="text" name="first-name" id="name" />
+          </div>
+          <div class="form-row">
+            <label for="name">Last Name</label>
+            <input type="text" name="last-name" id="name" />
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Joe@example.com"
+              autocomplete="off"
+            />
+          </div>
+          <div class="form-row">
+            <label for="phone-number">Phone Number</label>
+            <input type="tel" name="number" id="phone-number" />
+          </div>
+          <div class="button">
+            <button>Sign up</button>
+          </div>
+          <p>
+            Already have an account? <a href=""><em>Log in</em></a>
+          </p>
+        </form>
+      </div>
     </div>
   </body>
 </html>
