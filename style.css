@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 *,
 *::before,
 *::after {
@@ -69,7 +70,8 @@ h2 {
 body {
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(45deg, #955a32 0%, #fff5a2 51%, #956454 100%);
+  /* background: linear-gradient(45deg, #955a32 0%, #fff5a2 51%, #956454 100%); */
+  background-color: #ede6df;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   display: flex;
@@ -80,10 +82,11 @@ body {
 .registration-form {
   display: flex;
   border-radius: 10px;
-  box-shadow: 1px -1px 15px 5px #955a32;
+  box-shadow: 1px -1px 30px 3px #212020;
 }
 
 .image-support img {
+  position: relative;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
@@ -100,7 +103,7 @@ body {
   position: absolute;
   color: #fff;
   text-align: center;
-  left: 300px;
+  left: 250px;
   bottom: 130px;
 }
 
@@ -108,7 +111,7 @@ body {
   width: 600px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  background-color: #fff5a2;
+  background-color: #ede6df;
 }
 
 header {
@@ -138,6 +141,7 @@ header {
 .form-row input[type="password"]:focus,
 .form-row input[type="tel"]:focus {
   background: rgb(0 0 0 / 10%);
+  border: none;
 }
 .form-container h1 {
   font-family: "Philosopher", monospace, sans-serif;
@@ -173,7 +177,7 @@ button {
   width: 200px;
   color: #fff;
   background-color: chocolate;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: "Public Sans", monospace;
   font-size: 16px;
   padding: 10px 40px;
   font-weight: bold;
@@ -194,5 +198,15 @@ button:active {
 }
 
 .form-container p {
-  margin-left: 200px;
+  margin-left: 190px;
+  font-family: "Merriweather";
+}
+
+.form-container p a {
+  text-decoration: none;
+  color: rgb(247, 104, 47);
+}
+
+.form-container p a:hover {
+  text-decoration: underline;
 }
