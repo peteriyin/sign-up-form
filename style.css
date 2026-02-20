@@ -4,14 +4,66 @@
   box-sizing: border-box;
 }
 
+:root {
+  --custom-margin: calc(calc(600px - 490px) / 2);
+}
+
 *:not(dialog) {
   margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2 {
+  text-wrap: balance;
+}
+
+#root,
+#__next {
+  isolation: isolate;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   html {
     interpolate-size: allow-keywords;
   }
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url(fonts/MerriweatherSans-Regular.woff) format(woff);
+  src: url(fonts/MerriweatherSans-Regular.woff2) format(woff2);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Philosopher";
+  src: url(fonts/Philosopher.woff) format(woff);
+  src: url(fonts/Philosopher.woff2) format(woff2);
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
@@ -48,7 +100,7 @@ body {
   position: absolute;
   color: #fff;
   text-align: center;
-  left: 360px;
+  left: 300px;
   bottom: 130px;
 }
 
@@ -59,34 +111,88 @@ body {
   background-color: #fff5a2;
 }
 
-img {
-  display: block;
-  max-width: 100%;
+header {
+  margin-bottom: 10px;
 }
 
-input,
-button,
-textarea,
-select {
-  font: inherit;
+.form-row {
+  display: flex;
+  flex-direction: column;
 }
 
-p,
-h1,
-h2 {
-  overflow-wrap: break-word;
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row input[type="password"],
+.form-row input[type="tel"] {
+  max-width: 220px;
+  font-family: cursive, monospace;
+  border: 1px solid lightsalmon;
+  border-radius: 8px;
+  padding: 6px;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
-p {
-  text-wrap: pretty;
+.form-row input[type="text"]:focus,
+.form-row input[type="email"]:focus,
+.form-row input[type="password"]:focus,
+.form-row input[type="tel"]:focus {
+  background: rgb(0 0 0 / 10%);
+}
+.form-container h1 {
+  font-family: "Philosopher", monospace, sans-serif;
+  font-size: 3rem;
 }
 
-h1,
-h2 {
-  text-wrap: balance;
+.form-container h2 {
+  letter-spacing: 0.1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  font-weight: inherit;
 }
 
-#root,
-#__next {
-  isolation: isolate;
+.form-container label {
+  font-family: "Merriweather", monospace, sans-serif;
+}
+
+header,
+button {
+  margin-left: var(--custom-margin);
+}
+
+.form-row-group {
+  display: flex;
+  margin-bottom: 40px;
+  gap: 50px;
+  margin-left: var(--custom-margin);
+}
+
+button {
+  border-radius: 6px;
+  border: none;
+  width: 200px;
+  color: #fff;
+  background-color: chocolate;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 16px;
+  padding: 10px 40px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.button {
+  margin-left: 146px;
+}
+
+button:hover {
+  background: rgb(207 105 32 /80%);
+}
+
+button:active {
+  background-color: chocolate;
+}
+
+.form-container p {
+  margin-left: 200px;
 }
