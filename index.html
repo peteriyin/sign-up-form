@@ -37,38 +37,74 @@
         <form action="#" method="get" class="form">
           <div class="form-row-group">
             <div class="form-row">
-              <label for="firstName">First Name</label>
-              <input type="text" name="first-name" id="firstName" />
+              <label for="firstName">First Name*</label>
+              <input
+                type="text"
+                name="first-name"
+                id="firstName"
+                minlength="3"
+                required
+              />
+              <span></span>
             </div>
             <div class="form-row">
-              <label for="lastName">Last Name</label>
-              <input type="text" name="last-name" id="lastName" />
+              <label for="lastName">Last Name*</label>
+              <input
+                type="text"
+                name="last-name"
+                id="lastName"
+                minlength="3"
+                required
+              />
+              <span></span>
             </div>
           </div>
           <div class="form-row-group">
             <div class="form-row">
-              <label for="email">Email</label>
+              <label for="email">Email*</label>
               <input
                 type="email"
                 name="email"
                 id="email"
                 placeholder="Joe@example.com"
-                autocomplete="off"
+                autocomplete="on"
+                required
               />
+              <span></span>
             </div>
             <div class="form-row">
               <label for="phone-number">Phone Number</label>
-              <input type="tel" name="number" id="phone-number" />
+              <input
+                type="tel"
+                name="number"
+                id="phone-number"
+                minlength="5"
+                required
+              />
             </div>
           </div>
           <div class="form-row-group">
             <div class="form-row">
-              <label for="password">Password</label>
-              <input type="password" name="password" id="password" />
+              <label for="password">Password*</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                minlength="4"
+                required
+              />
+              <span></span>
             </div>
             <div class="form-row">
-              <label for="confirm_password">Confirm Password</label>
-              <input type="password" name="password" id="confirm_password" />
+              <label for="confirm_password">Confirm Password*</label>
+              <input
+                type="password"
+                name="password"
+                id="confirm_password"
+                minlength="4"
+                required
+              />
+              <span></span>
             </div>
           </div>
           <div class="button">
