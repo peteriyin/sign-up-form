@@ -90,6 +90,10 @@ body {
   border-bottom-left-radius: 10px;
 }
 
+.image-support {
+  position: relative;
+}
+
 .image-credit a {
   color: inherit;
 }
@@ -102,8 +106,8 @@ body {
   position: absolute;
   color: #fff;
   text-align: center;
-  left: 250px;
-  bottom: 130px;
+  left: 28px;
+  bottom: 20px;
 }
 
 .form-container {
